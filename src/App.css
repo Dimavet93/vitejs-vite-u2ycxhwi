@@ -231,6 +231,42 @@
     }
   
     /* ГЕРОЙ: принудительно одна колонка (текст сверху, фото ниже) */
+    /* ===== Mobile fixes ===== */
+@media (max-width: 520px) {
+  /* шапка не должна быть огромной */
+  .header, header {
+    padding: 12px 12px !important;
+    border-radius: 18px !important;
+  }
+
+  /* если шапка sticky/fixed — даём место контенту */
+  body {
+    padding-top: 110px; /* подгони: 90-130px */
+  }
+
+  /* меню: перенос строк + нормальные отступы */
+  .nav, nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 12px !important;
+    justify-content: flex-start !important;
+  }
+
+  .nav a, nav a {
+    font-size: 14px !important;
+    padding: 6px 8px !important;
+    white-space: nowrap !important;
+    opacity: 0.9;
+  }
+
+  /* кнопка в шапке — на всю ширину и ниже меню */
+  .header .cta, header .cta,
+  .header .btn, header .btn {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+}
+
     .hero,
     .heroGrid,
     .heroRow,
@@ -288,4 +324,20 @@
       border-radius: 999px !important;
     }
   }
+  /* ===== Mobile fixes ===== */
+  @media (max-width: 520px) {
+    .card, .panel, .glass, .pricingCard, .faqCard {
+      padding: 16px !important;
+      border-radius: 18px !important;
+    }
   
+    .section, section {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  
+    /* списки внутри карточек */
+    .card ul, .pricingCard ul {
+      padding-left: 18px !important;
+    }
+  }
