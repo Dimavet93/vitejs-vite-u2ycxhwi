@@ -182,3 +182,110 @@
     border-right-color: var(--border);
   }
 }
+/* =========================
+   MOBILE FIX (iPhone/Android)
+   ========================= */
+   @media (max-width: 520px) {
+
+    /* общие отступы */
+    .wrap {
+      padding: 14px !important;
+    }
+  
+    /* шапка: не огромная, меню прокручивается */
+    .nav.card {
+      position: sticky;
+      top: 10px;
+      z-index: 50;
+      padding: 12px !important;
+      gap: 10px !important;
+      align-items: center !important;
+      backdrop-filter: blur(18px);
+    }
+  
+    /* бренд в 1 строку, а меню ниже */
+    .nav.card .brand {
+      width: 100% !important;
+    }
+  
+    /* ссылки меню: горизонтальный скролл, чтобы не ломало верстку */
+    .nav.card nav,
+    .nav.card .links {
+      width: 100% !important;
+      display: flex !important;
+      gap: 14px !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+    }
+    .nav.card nav a,
+    .nav.card .links a {
+      white-space: nowrap !important;
+      flex: 0 0 auto;
+    }
+  
+    /* кнопка "Записаться" не должна перекрывать */
+    .nav.card .cta,
+    .nav.card button {
+      width: 100% !important;
+    }
+  
+    /* ГЕРОЙ: принудительно одна колонка (текст сверху, фото ниже) */
+    .hero,
+    .heroGrid,
+    .heroRow,
+    .hero .grid,
+    .wrap .hero,
+    .wrap .heroGrid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+  
+    /* заголовок чуть компактнее, чтобы не "выпирал" */
+    .heroTitle,
+    h1 {
+      font-size: 44px !important;
+      line-height: 1.02 !important;
+      letter-spacing: -0.02em;
+    }
+  
+    .heroSub,
+    .hero p {
+      font-size: 15px !important;
+      line-height: 1.55 !important;
+    }
+  
+    /* карточка с фото справа: на всю ширину */
+    .heroMedia,
+    .heroPhoto,
+    .personCard,
+    .resultCard {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  
+    /* если фото задано как background на .avatar */
+    .avatar {
+      width: 100% !important;
+      height: 420px !important;
+      background-size: cover !important;
+      background-position: center 18% !important; /* чтобы больше "в рост" */
+      border-radius: 18px !important;
+    }
+  
+    /* кнопки в герое: столбиком, на всю ширину */
+    .heroActions,
+    .actions,
+    .btnRow {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 10px !important;
+    }
+  
+    .btn, button, a.button {
+      width: 100% !important;
+      border-radius: 999px !important;
+    }
+  }
+  
