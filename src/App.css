@@ -341,3 +341,83 @@
       padding-left: 18px !important;
     }
   }
+/* ===== MOBILE FIX FINAL ===== */
+@media (max-width: 520px) {
+
+  /* шапка компактная */
+  .header {
+    padding: 14px !important;
+    border-radius: 20px !important;
+  }
+
+  .headerRow {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+
+  .nav {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+  }
+
+  .cta {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* HERO блок */
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding-top: 20px !important;
+  }
+
+  .heroTitle {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+  }
+
+  .heroSub {
+    font-size: 16px !important;
+  }
+
+  /* фото тренера */
+  .trainerCard {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  /* кнопки */
+  .heroActions,
+  .actions,
+  .btnRow {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .btn,
+  button,
+  .button {
+    width: 100% !important;
+    border-radius: 999px !important;
+  }
+
+  /* карточки секций */
+  .card {
+    padding: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  /* цены */
+  .priceCard {
+    padding: 20px !important;
+  }
+
+  .priceValue {
+    font-size: 32px !important;
+  }
+}
